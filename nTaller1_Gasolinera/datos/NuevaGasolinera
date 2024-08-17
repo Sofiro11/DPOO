@@ -1,0 +1,12 @@
+tipo:Corriente:3000:3000.0
+tipo:Gas:2600:5000.0
+tipo:Premium:3500:8000.0
+tipo:Diesel:2800:12000.0
+surtidor:Juan:Corriente:0.0:Gas:0.0:Premium:0.0:Diesel:0.0
+surtidor:Luis:Corriente:0.0:Gas:0.0:Premium:0.0:Diesel:0.0
+surtidor:Pablo:Corriente:0.0:Gas:0.0:Premium:0.0:Diesel:0.0
+surtidor:Rafael:Corriente:0.0:Gas:0.0:Premium:0.0:Diesel:0.0
+empleado:Pablo:0
+empleado:Rafael:0
+empleado:Luis:0
+empleado:Juan:0
