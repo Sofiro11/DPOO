@@ -2,7 +2,7 @@ package uniandes.dpoo.aerolinea.modelo.cliente;
 
 import java.util.ArrayList;
 
-import uniandes.dpoo.aerolinea.consola.Cliente;
+import uniandes.dpoo.aerolinea.modelo.Vuelo;
 import uniandes.dpoo.aerolinea.tiquetes.Tiquete;
 
 public class ClienteNatural extends Cliente {

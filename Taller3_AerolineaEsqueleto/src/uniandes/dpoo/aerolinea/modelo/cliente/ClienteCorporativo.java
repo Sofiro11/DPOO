@@ -1,8 +1,11 @@
 package uniandes.dpoo.aerolinea.modelo.cliente;
 
+import java.util.ArrayList;
+
 import org.json.JSONObject;
 
-import uniandes.dpoo.aerolinea.consola.Cliente;
+import uniandes.dpoo.aerolinea.modelo.Vuelo;
+import uniandes.dpoo.aerolinea.tiquetes.Tiquete;
 
 /**
  * Esta clase se usa para representar a los clientes de la aerolínea que son empresas
@@ -16,24 +19,47 @@ public class ClienteCorporativo extends Cliente
 
     private String nombreEmpresa;
     private int tamanoEmpresa;
+    private ArrayList<Tiquete> tiquetes;
     
-    public ClienteCorporativo( string nombreEmpresa, int tamanoEmpresa )
+    
+    public ClienteCorporativo( String nombreEmpresa, int tamanoEmpresa )
     {
         this.nombreEmpresa = nombreEmpresa;
         this.tamanoEmpresa = tamanoEmpresa;
+        this.tiquetes = new ArrayList<>();
     }
     
-    public String getnombreEmpresa(){
+    public String getNombreEmpresa(){
         return this.nombreEmpresa;
     }
-    public int gettamanoEmpresa(){
+    public int getTamanoEmpresa(){
         return this.tamanoEmpresa;
     }
-    public string getTipoCliente(){
+    public String getTipoCliente(){
         return CORPORATIVO;
     }
-    
+    public String getIdentificador(){
+        return this.nombreEmpresa;
 
+    }
+    public void agregarTiquete(Tiquete tiquete){
+        tiquetes.add(tiquete);
+    }
+    public int calcularValorTotalTiquetes(){
+        int total = 0;
+        for (Tiquete tiquete : tiquetes) {
+            total += tiquete.getTarifa();
+        }
+        return total;
+    }
+    
+    public void usarTiquetes(Vuelo vuelo) {
+        for (Tiquete tiquete : tiquetes) {
+            if (tiquete.getVuelo().equals(vuelo)) {
+                tiquete.marcarComoUsado();
+            }
+        }
+    }
 
     /**
      * Crea un nuevo objeto de tipo a partir de un objeto JSON.

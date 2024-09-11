@@ -1,5 +1,6 @@
-package uniandes.dpoo.aerolinea.consola;
+package uniandes.dpoo.aerolinea.modelo.cliente;
 
+import uniandes.dpoo.aerolinea.modelo.Vuelo;
 import uniandes.dpoo.aerolinea.tiquetes.Tiquete;
 
 public abstract class Cliente {
