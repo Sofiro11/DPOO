@@ -47,6 +47,13 @@ public class ProductoAjustado implements Producto
     {
         return 0;
     }
+    public void agregarIngrediente(Ingrediente ingrediente) {
+        agregados.add(ingrediente);
+    }
+
+    public void eliminarIngrediente(Ingrediente ingrediente) {
+        eliminados.add(ingrediente);
+    }
 
     /**
      * Genera el texto que debe aparecer en la factura.
